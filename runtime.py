@@ -1,4 +1,6 @@
 def get_3rd_value(my_list):
+    if len(my_list) < 3:
+        return None
     return my_list[2]
 
 def test_get_3rd_value():
@@ -7,7 +9,9 @@ def test_get_3rd_value():
 
 def get_last_value(my_list):
     item_count = len(my_list)
-    return my_list[itm_count]
+    if item_count == 0:
+        return None
+    return my_list[item_count - 1]
 
 def test_get_last_value():
     assert get_last_value([0, 1, 2]) == 2
